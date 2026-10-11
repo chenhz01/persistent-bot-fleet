@@ -2,6 +2,8 @@
 
 Run a team of long-lived bots on a single JSON file: spawn once, message each other forever, survive restarts. Bot-to-bot messages are the cheapest inter-agent protocol there is — no broker, no framework, no ports. If you are orchestrating multiple agent roles and your "topology" is really just "who talks to whom," this is enough; if you need delivery guarantees, retries, or cross-machine transport, it is not.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Most bots are single-session, single-role: the process ends, memory ends. The interesting pattern from long-lived harness bots is different — bots as **persistent processes with roles**, a shared group as the bus, and direct bot-to-bot messaging as the whole coordination protocol. Agent-team topology does not need an orchestration framework; it needs an inbox.
